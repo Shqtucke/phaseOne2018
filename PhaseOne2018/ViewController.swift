@@ -22,6 +22,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.view.backgroundColor = UIColor.clear
+        
         blurView.layer.cornerRadius = 15
         sideView.layer.shadowColor = UIColor.black.cgColor
         sideView.layer.shadowOpacity = 0.8
@@ -36,6 +41,9 @@ class ViewController: UIViewController {
         button2.layer.shadowOffset = CGSize(width: 0.3 , height: 0)
         
         viewConstraint.constant = -123
+        
+        
+        
         
     }
     

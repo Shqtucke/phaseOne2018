@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13770" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13770" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wVI-2j-o73">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Las Vegas-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PhaseOne2018" customModuleProvider="target" sceneMemberID="viewController">
@@ -22,12 +22,12 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3D0-tG-KCq">
-                                <rect key="frame" x="0.0" y="60" width="123" height="540"/>
+                                <rect key="frame" x="0.0" y="80" width="123" height="496"/>
                                 <subviews>
                                     <visualEffectView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ajb-CE-6MH">
-                                        <rect key="frame" x="0.0" y="0.0" width="123" height="540"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="123" height="496"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="cmo-PK-Ho9">
-                                            <rect key="frame" x="0.0" y="0.0" width="123" height="540"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="123" height="496"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aW8-mR-Pdg">
@@ -44,6 +44,9 @@
                                                             <integer key="value" value="15"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <segue destination="8H8-Fw-hVd" kind="show" id="T2e-Xd-Ose"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BLF-Ta-w4a">
                                                     <rect key="frame" x="8" y="46" width="107" height="30"/>
@@ -52,13 +55,16 @@
                                                         <constraint firstAttribute="height" constant="30" id="pBt-sx-Ctp"/>
                                                     </constraints>
                                                     <state key="normal" title="Casinos">
-                                                        <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                             <integer key="value" value="15"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <segue destination="sTY-tR-sqI" kind="show" id="Dfj-1y-B0P"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -90,15 +96,16 @@
                             <constraint firstItem="hKv-CB-IO4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="W3s-ls-MaM"/>
                             <constraint firstItem="hKv-CB-IO4" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="WaY-Wc-hUQ"/>
                             <constraint firstItem="hKv-CB-IO4" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="YVt-u2-oI5"/>
-                            <constraint firstItem="3D0-tG-KCq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="mR4-AD-cJ1"/>
+                            <constraint firstItem="3D0-tG-KCq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="mR4-AD-cJ1"/>
                             <constraint firstItem="hKv-CB-IO4" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="mRV-3E-Yn4"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3D0-tG-KCq" secondAttribute="bottom" constant="67" id="nFB-Bm-bMv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3D0-tG-KCq" secondAttribute="bottom" constant="91" id="nFB-Bm-bMv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="F06-jk-fCs" appends="YES" id="rhD-6c-o1r"/>
                         </connections>
                     </view>
+                    <navigationItem key="navigationItem" title="Las Vegas" id="yLB-JL-8jS"/>
                     <connections>
                         <outlet property="blurView" destination="ajb-CE-6MH" id="Bog-bJ-Nwz"/>
                         <outlet property="button1" destination="aW8-mR-Pdg" id="Pre-J6-ive"/>
@@ -114,7 +121,55 @@
                     </connections>
                 </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+            <point key="canvasLocation" x="476" y="133.5832083958021"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="gqF-Tu-ndM">
+            <objects>
+                <viewController id="8H8-Fw-hVd" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Jtm-Ca-Nv7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.1622568667" green="0.50066369769999997" blue="0.72439849379999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="bPH-0D-v9s"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nV5-CS-elp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1170" y="134"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="htL-GO-ktZ">
+            <objects>
+                <viewController id="sTY-tR-sqI" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ghW-mr-xsi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.3007236123" green="0.56984609369999994" blue="0.74288707970000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="0go-Wl-fOA"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MnK-Xc-2E0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1391" y="548"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="96g-ax-bvs">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wVI-2j-o73" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RGD-8p-kB6">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Pfq-Xd-9Jo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Pn-4o-iIf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-230" y="134"/>
         </scene>
     </scenes>
     <resources>
