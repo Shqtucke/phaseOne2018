@@ -24,7 +24,7 @@ class ViewController: UIViewController {
         
         blurView.layer.cornerRadius = 15
         sideView.layer.shadowColor = UIColor.black.cgColor
-        sideView.layer.shadowOpacity = 1
+        sideView.layer.shadowOpacity = 0.8
         sideView.layer.shadowOffset = CGSize(width: 5, height: 0)
         
         button1.layer.shadowColor = UIColor.black.cgColor
@@ -35,11 +35,61 @@ class ViewController: UIViewController {
         button2.layer.shadowOpacity = 0.3
         button2.layer.shadowOffset = CGSize(width: 0.3 , height: 0)
         
+        viewConstraint.constant = -123
+        
     }
-
+    
+    @IBAction func panPerformed(_ sender: UIPanGestureRecognizer) {
+        
+        if sender.state == .began || sender.state == .changed {
+            let translation = sender.translation(in: self.view).x
+            
+            if translation > 0 {     //swipe right
+                
+                if viewConstraint.constant < 20 {
+                    UIView.animate(withDuration: 0.2, animations: {
+                        self.viewConstraint.constant += translation / 10
+                        self.view.layoutIfNeeded()
+                    })
+                }
+                
+            } else {              //swipe left
+                
+                if viewConstraint.constant > -123 {
+                    UIView.animate(withDuration: 0.2, animations: {
+                        self.viewConstraint.constant += translation / 10
+                        self.view.layoutIfNeeded()
+                    })
+            }
+        }
+            
+        } else if sender.state == .ended {
+            if viewConstraint.constant < -100 {
+                UIView.animate(withDuration: 0.2, animations: {
+                    
+                    self.viewConstraint.constant = -123
+                    self.view.layoutIfNeeded()
+                })
+            } else {
+                UIView.animate(withDuration: 0.2, animations: {
+                    self.viewConstraint.constant = 0
+                    self.view.layoutIfNeeded()
+                })
+            }
+        }
+        
+    }
+    
 
     
 
 
 }
+
+
+
+
+
+
+
 

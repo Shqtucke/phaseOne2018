@@ -108,7 +108,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <panGestureRecognizer minimumNumberOfTouches="1" id="F06-jk-fCs"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="F06-jk-fCs">
+                    <connections>
+                        <action selector="panPerformed:" destination="BYZ-38-t0r" id="ooA-5B-csX"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
