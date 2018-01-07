@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13770"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -123,20 +124,89 @@
             </objects>
             <point key="canvasLocation" x="476" y="133.5832083958021"/>
         </scene>
-        <!--View Controller-->
+        <!--Casino View Controller-->
         <scene sceneID="gqF-Tu-ndM">
             <objects>
-                <viewController id="8H8-Fw-hVd" sceneMemberID="viewController">
+                <viewController id="8H8-Fw-hVd" customClass="CasinoViewController" customModule="PhaseOne2018" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Jtm-Ca-Nv7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.1622568667" green="0.50066369769999997" blue="0.72439849379999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bw1" translatesAutoresizingMaskIntoConstraints="NO" id="vde-Tf-ipW">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="r1a-Ja-IRF">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CasinoCell" rowHeight="88" id="9Az-xt-AM7" customClass="CasinoCell" customModule="PhaseOne2018" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="88"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9Az-xt-AM7" id="K8D-t2-e0U">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="87.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3t5-HH-RYG">
+                                                    <rect key="frame" x="15" y="8" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="lmi-mI-X43"/>
+                                                        <constraint firstAttribute="width" constant="50" id="zyn-Qr-pP3"/>
+                                                    </constraints>
+                                                    <state key="normal" image="cosmo"/>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Casino Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MAQ-ol-Cro">
+                                                    <rect key="frame" x="73" y="11" width="266" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ihv-Hi-FNv">
+                                                    <rect key="frame" x="73" y="40" width="266" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Ihv-Hi-FNv" firstAttribute="trailing" secondItem="MAQ-ol-Cro" secondAttribute="trailing" id="0Qn-yv-3qH"/>
+                                                <constraint firstItem="MAQ-ol-Cro" firstAttribute="leading" secondItem="3t5-HH-RYG" secondAttribute="trailing" constant="8" symbolic="YES" id="50R-OK-00U"/>
+                                                <constraint firstItem="MAQ-ol-Cro" firstAttribute="top" secondItem="K8D-t2-e0U" secondAttribute="topMargin" id="7bs-ce-XNs"/>
+                                                <constraint firstItem="Ihv-Hi-FNv" firstAttribute="leading" secondItem="MAQ-ol-Cro" secondAttribute="leading" id="NPR-1H-KH1"/>
+                                                <constraint firstAttribute="bottom" secondItem="3t5-HH-RYG" secondAttribute="bottom" constant="29.5" id="kO9-9p-dCj"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="MAQ-ol-Cro" secondAttribute="trailing" constant="21" id="nnu-gh-rfX"/>
+                                                <constraint firstItem="3t5-HH-RYG" firstAttribute="top" secondItem="K8D-t2-e0U" secondAttribute="top" constant="8" id="w9a-5F-1ZG"/>
+                                                <constraint firstItem="3t5-HH-RYG" firstAttribute="leading" secondItem="K8D-t2-e0U" secondAttribute="leading" constant="15" id="wU5-MR-A5g"/>
+                                                <constraint firstItem="Ihv-Hi-FNv" firstAttribute="top" secondItem="MAQ-ol-Cro" secondAttribute="bottom" constant="8" symbolic="YES" id="z1W-hq-ig1"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="casinoDescription" destination="Ihv-Hi-FNv" id="1nq-w8-57t"/>
+                                            <outlet property="casinoImage" destination="3t5-HH-RYG" id="xR3-ww-kal"/>
+                                            <outlet property="casinoName" destination="MAQ-ol-Cro" id="Mxi-Fx-0jq"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="vde-Tf-ipW" firstAttribute="bottom" secondItem="bPH-0D-v9s" secondAttribute="bottom" id="FNi-7F-NHP"/>
+                            <constraint firstItem="vde-Tf-ipW" firstAttribute="top" secondItem="Jtm-Ca-Nv7" secondAttribute="top" id="GIF-dK-mIq"/>
+                            <constraint firstItem="vde-Tf-ipW" firstAttribute="leading" secondItem="bPH-0D-v9s" secondAttribute="leading" id="Lbi-CA-S7f"/>
+                            <constraint firstItem="r1a-Ja-IRF" firstAttribute="trailing" secondItem="bPH-0D-v9s" secondAttribute="trailing" id="Mu5-c1-1dr"/>
+                            <constraint firstItem="r1a-Ja-IRF" firstAttribute="top" secondItem="bPH-0D-v9s" secondAttribute="top" id="OKd-pr-PaR"/>
+                            <constraint firstItem="vde-Tf-ipW" firstAttribute="trailing" secondItem="bPH-0D-v9s" secondAttribute="trailing" id="Psu-uC-rq8"/>
+                            <constraint firstItem="r1a-Ja-IRF" firstAttribute="leading" secondItem="bPH-0D-v9s" secondAttribute="leading" id="ta0-65-c7Q"/>
+                            <constraint firstItem="r1a-Ja-IRF" firstAttribute="bottom" secondItem="bPH-0D-v9s" secondAttribute="bottom" id="xIR-9F-EQ3"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="bPH-0D-v9s"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="r1a-Ja-IRF" id="yPX-XF-zpS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nV5-CS-elp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1170" y="134"/>
+            <point key="canvasLocation" x="1168.8" y="133.5832083958021"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="htL-GO-ktZ">
@@ -145,13 +215,23 @@
                     <view key="view" contentMode="scaleToFill" id="ghW-mr-xsi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.3007236123" green="0.56984609369999994" blue="0.74288707970000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bw1" translatesAutoresizingMaskIntoConstraints="NO" id="hPf-in-B1w">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="hPf-in-B1w" firstAttribute="top" secondItem="ghW-mr-xsi" secondAttribute="top" id="5AY-jc-3aJ"/>
+                            <constraint firstItem="hPf-in-B1w" firstAttribute="trailing" secondItem="0go-Wl-fOA" secondAttribute="trailing" id="U0w-Xh-ZbS"/>
+                            <constraint firstItem="hPf-in-B1w" firstAttribute="bottom" secondItem="0go-Wl-fOA" secondAttribute="bottom" id="f0G-RJ-a8Q"/>
+                            <constraint firstItem="hPf-in-B1w" firstAttribute="leading" secondItem="0go-Wl-fOA" secondAttribute="leading" id="ng9-cD-cMh"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="0go-Wl-fOA"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MnK-Xc-2E0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1391" y="548"/>
+            <point key="canvasLocation" x="1832.8" y="133.5832083958021"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="96g-ax-bvs">
@@ -174,5 +254,6 @@
     </scenes>
     <resources>
         <image name="bw1" width="1002" height="564"/>
+        <image name="cosmo" width="194" height="259"/>
     </resources>
 </document>
