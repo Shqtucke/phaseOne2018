@@ -22,8 +22,7 @@ class CasinoViewController: UIViewController, UITableViewDelegate, UITableViewDa
         tableView.dataSource = self
         tableView.reloadData()
 
-        
-    }
+        }
 
     //TableView Animations
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
@@ -45,26 +44,47 @@ class CasinoViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "CasinoCell") as? CasinoCell {
-            let casino = DataService.instance.getCasinos()[indexPath.row]
-            cell.updateViews(casino: casino)
+    if let cell = tableView.dequeueReusableCell(withIdentifier: "CasinoCell") as? CasinoCell {
+        
+        cell.casinoImage.clipsToBounds = false
+        cell.casinoImage.layer.cornerRadius = 10
+        cell.casinoImage.layer.shadowColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        cell.casinoImage.layer.shadowOpacity = 1
+        cell.casinoImage.layer.shadowOffset = CGSize.zero
+        cell.casinoImage.layer.shadowRadius = 10
+        cell.layer.backgroundColor = UIColor.clear.cgColor
             
-            return cell
+        let casino = DataService.instance.getCasinos()[indexPath.row]
+            cell.updateViews(casino: casino)
+        
+        return cell
         } else {
             
             return CasinoCell()
         }
     }
     
-    //Opens outside of your app
+   //Opens outside of your app
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let url = URL(string: urlArray[indexPath.row])
         
-        if let url = url {
-            if UIApplication.shared.canOpenURL(url) {
-                UIApplication.shared.open(url)
+     tableView.deselectRow(at: indexPath, animated: true)
+       
+    }
+    
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let book = UITableViewRowAction(style: .normal, title: "website") { (action, index) in
+            let url = URL(string: self.urlArray[indexPath.row])
+            
+            if let url = url {
+                if UIApplication.shared.canOpenURL(url) {
+                    UIApplication.shared.open(url)
+                }
             }
-        }
+            
+    }
+    book.backgroundColor = #colorLiteral(red: 0.1622568667, green: 0.5006636977, blue: 0.7243984938, alpha: 1)
+        
+        return [book]
     }
 
 }

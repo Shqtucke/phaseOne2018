@@ -13,7 +13,7 @@ struct Casino {
     
     private(set) public var title: String
     private(set) public var description: String
-    private(set) public var  imageButton: String
+    private(set) public var  imageButton: String //imageButton
     private(set) public var website: String 
     
     init(title: String, description: String, imageButton: String, website: String ) {
