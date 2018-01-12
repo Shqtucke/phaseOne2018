@@ -15,9 +15,22 @@ class DataService {
     
     private let casinos = [
     
-        Casino(title: "Aria", description: "The Strip", imageButton: "1.png", website: "https:www.aria.com"),
-        Casino(title: "Ballys", description: "The Strip", imageButton: "1.png", website: "https:www.aria.com"),
-        Casino(title: "Bellagios", description: "The Strip", imageButton: "1.png", website: "https:www.aria.com"),
+        Casino(title: "Aria", description: "The Strip", imageButton: "Aria.jpeg", website: "https:www.aria.com"),
+        Casino(title: "Ballys", description: "The Strip", imageButton: "ballys1.jpg", website: "https://www.aria.com"),
+        Casino(title: "Bellagio", description: "The Strip", imageButton: "bellagio1.jpg", website: "https:www.aria.com"),
+        Casino(title: "Caesars", description: "The Strip", imageButton: "caesars.jpg", website: "https://www.aria.com"),
+        Casino(title: "Casino Royale", description: "The Strip", imageButton: "casinoR.jpg", website: "https://www.aria.com"),
+        Casino(title: "Circus Circus", description: "The Strip", imageButton: "circus.jpg", website: "https:www.aria.com"),
+        Casino(title: "Cosmopolitian", description: "The Strip", imageButton: "cosmo.jpg", website: "https://www.aria.com"),
+        
+        Casino(title: "Aria", description: "The Strip", imageButton: "Aria.jpeg", website: "https:www.aria.com"),
+        Casino(title: "Ballys", description: "The Strip", imageButton: "ballys1.jpg", website: "https://www.aria.com"),
+        Casino(title: "Bellagio", description: "The Strip", imageButton: "bellagio1.jpg", website: "https:www.aria.com"),
+        Casino(title: "Caesars", description: "The Strip", imageButton: "caesars.jpg", website: "https://www.aria.com"),
+        Casino(title: "Casino Royale", description: "The Strip", imageButton: "casinoR.jpg", website: "https://www.aria.com"),
+        Casino(title: "Circus Circus", description: "The Strip", imageButton: "circus.jpg", website: "https:www.aria.com"),
+        Casino(title: "Cosmopolitian", description: "The Strip", imageButton: "cosmo.jpg", website: "https://www.aria.com"),
+        
     
     
     ]

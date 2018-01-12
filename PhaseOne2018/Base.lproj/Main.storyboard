@@ -10,6 +10,13 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-Bold</string>
+            <string>AvenirNext-BoldItalic</string>
+            <string>AvenirNext-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Las Vegas-->
         <scene sceneID="tne-QT-ifu">
@@ -37,7 +44,8 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="8Cr-la-bVE"/>
                                                     </constraints>
-                                                    <state key="normal" title="Locate">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                                    <state key="normal" title="Casino">
                                                         <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
                                                     <userDefinedRuntimeAttributes>
@@ -55,7 +63,8 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="pBt-sx-Ctp"/>
                                                     </constraints>
-                                                    <state key="normal" title="Casinos">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                                    <state key="normal" title="Locate">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <userDefinedRuntimeAttributes>
@@ -135,7 +144,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bw1" translatesAutoresizingMaskIntoConstraints="NO" id="vde-Tf-ipW">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <visualEffectView opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nsy-Fi-ke8">
+                            <visualEffectView opaque="NO" alpha="0.29999999999999999" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nsy-Fi-ke8">
                                 <rect key="frame" x="43" y="64" width="288" height="603"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="iMb-4o-NJw">
@@ -144,7 +153,7 @@
                                 </view>
                                 <blurEffect style="light"/>
                             </visualEffectView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="r1a-Ja-IRF">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="r1a-Ja-IRF">
                                 <rect key="frame" x="43" y="64" width="288" height="603"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -152,51 +161,44 @@
                                         <rect key="frame" x="0.0" y="28" width="288" height="88"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9Az-xt-AM7" id="K8D-t2-e0U">
-                                            <rect key="frame" x="0.0" y="0.0" width="288" height="87.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="288" height="88"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Casino Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MAQ-ol-Cro">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Casino Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="MAQ-ol-Cro">
                                                     <rect key="frame" x="112" y="11" width="140" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="15"/>
                                                     <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ihv-Hi-FNv">
-                                                    <rect key="frame" x="112" y="40" width="140" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ihv-Hi-FNv">
+                                                    <rect key="frame" x="112" y="40" width="140" height="20"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-BoldItalic" family="Avenir Next" pointSize="14"/>
                                                     <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3t5-HH-RYG">
-                                                    <rect key="frame" x="54" y="18" width="50" height="50"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YUa-FP-Krc">
+                                                    <rect key="frame" x="30" y="19" width="50" height="50"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="50" id="lmi-mI-X43"/>
-                                                        <constraint firstAttribute="width" constant="50" id="zyn-Qr-pP3"/>
+                                                        <constraint firstAttribute="height" constant="50" id="Cj7-kL-Ve5"/>
+                                                        <constraint firstAttribute="width" constant="50" id="YtN-he-ZOY"/>
                                                     </constraints>
-                                                    <state key="normal" image="cosmo"/>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                            <integer key="value" value="25"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                    </userDefinedRuntimeAttributes>
-                                                </button>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="Ihv-Hi-FNv" firstAttribute="trailing" secondItem="MAQ-ol-Cro" secondAttribute="trailing" id="0Qn-yv-3qH"/>
-                                                <constraint firstItem="MAQ-ol-Cro" firstAttribute="leading" secondItem="3t5-HH-RYG" secondAttribute="trailing" constant="8" id="50R-OK-00U"/>
                                                 <constraint firstItem="MAQ-ol-Cro" firstAttribute="top" secondItem="K8D-t2-e0U" secondAttribute="topMargin" id="7bs-ce-XNs"/>
                                                 <constraint firstItem="Ihv-Hi-FNv" firstAttribute="leading" secondItem="MAQ-ol-Cro" secondAttribute="leading" id="NPR-1H-KH1"/>
-                                                <constraint firstAttribute="bottom" secondItem="3t5-HH-RYG" secondAttribute="bottom" constant="19.5" id="kO9-9p-dCj"/>
+                                                <constraint firstItem="YUa-FP-Krc" firstAttribute="leading" secondItem="K8D-t2-e0U" secondAttribute="leadingMargin" constant="15" id="eNJ-x7-0Nd"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="YUa-FP-Krc" secondAttribute="bottom" constant="8" id="guY-jU-rMd"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="MAQ-ol-Cro" secondAttribute="trailing" constant="21" id="nnu-gh-rfX"/>
-                                                <constraint firstItem="3t5-HH-RYG" firstAttribute="top" secondItem="K8D-t2-e0U" secondAttribute="top" constant="18" id="w9a-5F-1ZG"/>
-                                                <constraint firstItem="3t5-HH-RYG" firstAttribute="leading" secondItem="K8D-t2-e0U" secondAttribute="leading" constant="54" id="wU5-MR-A5g"/>
+                                                <constraint firstItem="YUa-FP-Krc" firstAttribute="top" secondItem="K8D-t2-e0U" secondAttribute="topMargin" constant="8" id="xqb-dp-lfd"/>
                                                 <constraint firstItem="Ihv-Hi-FNv" firstAttribute="top" secondItem="MAQ-ol-Cro" secondAttribute="bottom" constant="8" symbolic="YES" id="z1W-hq-ig1"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="casinoDescription" destination="Ihv-Hi-FNv" id="1nq-w8-57t"/>
-                                            <outlet property="casinoImage" destination="3t5-HH-RYG" id="xR3-ww-kal"/>
+                                            <outlet property="casinoImage" destination="YUa-FP-Krc" id="kaQ-Ys-h1Y"/>
                                             <outlet property="casinoName" destination="MAQ-ol-Cro" id="Mxi-Fx-0jq"/>
                                         </connections>
                                     </tableViewCell>
@@ -269,6 +271,5 @@
     </scenes>
     <resources>
         <image name="bw1" width="1002" height="564"/>
-        <image name="cosmo" width="194" height="259"/>
     </resources>
 </document>

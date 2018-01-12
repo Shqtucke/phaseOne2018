@@ -10,12 +10,14 @@ import UIKit
 
 class CasinoCell: UITableViewCell {
     
-    @IBOutlet var casinoImage: UIButton!
+   
+    @IBOutlet var casinoImage: UIImageView!
     @IBOutlet var casinoName: UILabel!
     @IBOutlet var casinoDescription: UILabel!
     
     func updateViews(casino: Casino) {
         //casinoImage.image = UIImage(named: casino.imageButton)
+        casinoImage.image = UIImage(named: casino.imageButton)
         casinoName.text = casino.title
         casinoDescription.text = casino.description
     }

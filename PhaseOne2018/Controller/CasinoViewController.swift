@@ -48,12 +48,12 @@ class CasinoViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         cell.casinoImage.clipsToBounds = false
         cell.casinoImage.layer.cornerRadius = 10
-        cell.casinoImage.layer.shadowColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        cell.casinoImage.layer.shadowColor = #colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1)
         cell.casinoImage.layer.shadowOpacity = 1
         cell.casinoImage.layer.shadowOffset = CGSize.zero
-        cell.casinoImage.layer.shadowRadius = 10
+        cell.casinoImage.layer.shadowRadius = 5
         cell.layer.backgroundColor = UIColor.clear.cgColor
-            
+        
         let casino = DataService.instance.getCasinos()[indexPath.row]
             cell.updateViews(casino: casino)
         
