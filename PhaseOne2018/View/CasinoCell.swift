@@ -25,7 +25,16 @@ class CasinoCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        casinoName.layer.cornerRadius = 15
+        casinoName.layer.borderColor = UIColor.white.cgColor
+        casinoName.layer.borderWidth = 1
+        casinoName.layer.backgroundColor = UIColor.darkGray.cgColor
+        casinoDescription.layer.cornerRadius = 15
+        casinoDescription.layer.borderColor = UIColor.white.cgColor
+        casinoDescription.layer.borderWidth = 1
+        casinoDescription.layer.backgroundColor = UIColor.darkGray.cgColor
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

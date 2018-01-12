@@ -13,7 +13,7 @@ class CasinoViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     
     @IBOutlet var tableView: UITableView!
-    var urlArray = ["https://www.aria.com/en.html", "https://www.caesars.com/ballys-las-vegas", "https://www.bellagio.com/en/restaurants.html"]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,8 +23,8 @@ class CasinoViewController: UIViewController, UITableViewDelegate, UITableViewDa
         tableView.reloadData()
 
         }
-
-    //TableView Animations
+    
+//TableView Animations
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         //cell.alpha = 0
         let rotationTransform = CATransform3DTranslate(CATransform3DIdentity, -500, 10, 0)
@@ -47,7 +47,7 @@ class CasinoViewController: UIViewController, UITableViewDelegate, UITableViewDa
     if let cell = tableView.dequeueReusableCell(withIdentifier: "CasinoCell") as? CasinoCell {
         
         cell.casinoImage.clipsToBounds = false
-        cell.casinoImage.layer.cornerRadius = 10
+        cell.casinoImage.layer.cornerRadius = 5.0
         cell.casinoImage.layer.shadowColor = #colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1)
         cell.casinoImage.layer.shadowOpacity = 1
         cell.casinoImage.layer.shadowOffset = CGSize.zero
@@ -68,18 +68,31 @@ class CasinoViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
      tableView.deselectRow(at: indexPath, animated: true)
-       
+        let casino = DataService.instance.getCasinos()[indexPath.row]
+        performSegue(withIdentifier: "RestaurantVC", sender: casino)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let restaurantVC = segue.destination as? RestaurantVC {
+            
+            let barBtn = UIBarButtonItem()
+            barBtn.title = ""
+            navigationItem.backBarButtonItem = barBtn
+            
+            assert(sender as? Casino != nil)
+            restaurantVC.initRestaurant(casino: sender as! Casino)
+            
+            
+        }
+    }
+    
+
     }
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let book = UITableViewRowAction(style: .normal, title: "website") { (action, index) in
-            let url = URL(string: self.urlArray[indexPath.row])
             
-            if let url = url {
-                if UIApplication.shared.canOpenURL(url) {
-                    UIApplication.shared.open(url)
-                }
-            }
+
             
     }
     book.backgroundColor = #colorLiteral(red: 0.1622568667, green: 0.5006636977, blue: 0.7243984938, alpha: 1)
@@ -87,7 +100,7 @@ class CasinoViewController: UIViewController, UITableViewDelegate, UITableViewDa
         return [book]
     }
 
-}
+
 
 
 
