@@ -85,8 +85,8 @@
 			isa = PBXGroup;
 			children = (
 				DCA8B5EB20012F6400D99303 /* ViewController.swift */,
-				DCA8B5FE200176F400D99303 /* CasinoViewController.swift */,
 				DC06B3E9200947BF00BFBFD6 /* RestaurantVC.swift */,
+				DCA8B5FE200176F400D99303 /* CasinoViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -94,8 +94,8 @@
 		DCA8B5FC200176B000D99303 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				DCA8B60220017F6A00D99303 /* Casino.swift */,
 				DC06B3EF20094EBE00BFBFD6 /* Restaurants.swift */,
+				DCA8B60220017F6A00D99303 /* Casino.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -103,8 +103,8 @@
 		DCA8B5FD200176BB00D99303 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				DCA8B60020017D8400D99303 /* CasinoCell.swift */,
 				DC06B3ED20094C7700BFBFD6 /* RestaurantCell.swift */,
+				DCA8B60020017D8400D99303 /* CasinoCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";

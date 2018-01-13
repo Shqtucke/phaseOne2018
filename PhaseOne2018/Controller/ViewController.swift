@@ -22,6 +22,15 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Added an alert here just for fun
+        let alert = UIAlertController(title: "Welcome to Vegas", message: "Swipe Right to Begin!", preferredStyle: .alert)
+        
+        let action = UIAlertAction(title: "Let's Go!", style: .default, handler: nil)
+        
+        alert.addAction(action)
+        
+        present(alert, animated: true)
+        
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
@@ -42,15 +51,15 @@ class ViewController: UIViewController {
         
         viewConstraint.constant = -123
         
-        
-        
-        
-    }
+        }
+    
+
     
     @IBAction func panPerformed(_ sender: UIPanGestureRecognizer) {
-        
-        if sender.state == .began || sender.state == .changed {
-            let translation = sender.translation(in: self.view).x
+ 
+    if sender.state == .began || sender.state == .changed {
+            
+          let translation = sender.translation(in: self.view).x
             
             if translation > 0 {     //swipe right
                 
@@ -58,6 +67,8 @@ class ViewController: UIViewController {
                     UIView.animate(withDuration: 0.2, animations: {
                         self.viewConstraint.constant += translation / 10
                         self.view.layoutIfNeeded()
+                        
+                        
                     })
                 }
                 

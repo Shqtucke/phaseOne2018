@@ -68,9 +68,18 @@ class CasinoViewController: UIViewController, UITableViewDelegate, UITableViewDa
    //Opens outside of your app
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-     tableView.deselectRow(at: indexPath, animated: true)
+        tableView.deselectRow(at: indexPath, animated: true)
         let casino = DataService.instance.getCasinos()[indexPath.row]
         performSegue(withIdentifier: "RestaurantVC", sender: casino)
+        
+        //Added an alert here just for fun
+        let alert = UIAlertController(title: "Casino Restaurants", message: "Here's a list of places to eat in this Casino!", preferredStyle: .alert)
+        
+        let action = UIAlertAction(title: "Let's Eat!", style: .default, handler: nil)
+        
+        alert.addAction(action)
+        
+        present(alert, animated: true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -88,7 +97,7 @@ class CasinoViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-        let book = UITableViewRowAction(style: .normal, title: "website") { (action, index) in
+        let book = UITableViewRowAction(style: .default, title: "website") { (action, index) in
             let url = URL(string: self.urlArray[indexPath.row])
             
             if let url = url {
