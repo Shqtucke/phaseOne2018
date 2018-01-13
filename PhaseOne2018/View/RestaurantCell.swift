@@ -21,4 +21,10 @@ class RestaurantCell: UICollectionViewCell {
         
     }
     
+    override func awakeFromNib() {
+        imageName.layer.cornerRadius = 10
+        imageName.clipsToBounds = true
+        
+    }
+    
 }

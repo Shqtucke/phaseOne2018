@@ -29,6 +29,11 @@ class ViewController: UIViewController {
         
         alert.addAction(action)
         
+        let deleteAction = UIAlertAction(title: "Delete?", style: .destructive) { (action) in
+            print("deleted")
+        }
+        
+        alert.addAction(deleteAction)
         present(alert, animated: true)
         
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)

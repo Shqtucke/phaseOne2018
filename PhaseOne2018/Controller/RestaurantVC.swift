@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RestaurantVC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class RestaurantVC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     private(set) public var restaurants = [Restaurant]()
     @IBOutlet var restaurantCollection: UICollectionView!
@@ -34,13 +34,13 @@ class RestaurantVC: UIViewController, UICollectionViewDataSource, UICollectionVi
         
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RestaurantCell", for: indexPath) as? RestaurantCell{
             
-            cell.contentView.clipsToBounds = false
-            cell.contentView.layer.shadowColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-            cell.contentView.layer.shadowOpacity = 1
-            cell.contentView.layer.shadowOffset = CGSize.zero
-            cell.contentView.layer.shadowRadius = 10
-            cell.imageName.clipsToBounds = true
-            cell.imageName.layer.cornerRadius = 10
+//            cell.contentView.clipsToBounds = false
+//            cell.contentView.layer.shadowColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+//            cell.contentView.layer.shadowOpacity = 1
+//            cell.contentView.layer.shadowOffset = CGSize.zero
+//            cell.contentView.layer.shadowRadius = 10
+//            cell.imageName.clipsToBounds = true
+//            cell.imageName.layer.cornerRadius = 10
             
             let restuarant = restaurants[indexPath.row]
             cell.updateViews(restaurant: restuarant)
@@ -66,6 +66,12 @@ class RestaurantVC: UIViewController, UICollectionViewDataSource, UICollectionVi
         let restaurant = restaurants[indexPath.row]
         performSegue(withIdentifier: "MenuVC", sender: restaurant)
         
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        //Don't forget to subtract your insects from the sides and top and bottom
+        return CGSize(width: 100, height: 100)
     }
     
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
