@@ -47,12 +47,12 @@ class CasinoViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
     if let cell = tableView.dequeueReusableCell(withIdentifier: "CasinoCell") as? CasinoCell {
         
-        cell.casinoImage.clipsToBounds = false
-        cell.casinoImage.layer.cornerRadius = 5.0
-        cell.casinoImage.layer.shadowColor = #colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1)
-        cell.casinoImage.layer.shadowOpacity = 1
-        cell.casinoImage.layer.shadowOffset = CGSize.zero
-        cell.casinoImage.layer.shadowRadius = 5
+        cell.casinoImage.clipsToBounds = true
+        cell.casinoImage.layer.cornerRadius = cell.casinoImage.frame.height / 2
+        //cell.casinoImage.layer.shadowColor = #colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1)
+        //cell.casinoImage.layer.shadowOpacity = 1
+        //cell.casinoImage.layer.shadowOffset = CGSize.zero
+        //cell.casinoImage.layer.shadowRadius = 5
         cell.layer.backgroundColor = UIColor.clear.cgColor
         
         let casino = DataService.instance.getCasinos()[indexPath.row]
@@ -107,7 +107,7 @@ class CasinoViewController: UIViewController, UITableViewDelegate, UITableViewDa
             }
             
         }
-        book.backgroundColor = #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1)
+        book.backgroundColor = #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)
         
         return [book]
 

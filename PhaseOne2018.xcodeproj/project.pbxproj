@@ -84,9 +84,9 @@
 		DCA8B5FB2001769600D99303 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				DCA8B5EB20012F6400D99303 /* ViewController.swift */,
 				DC06B3E9200947BF00BFBFD6 /* RestaurantVC.swift */,
 				DCA8B5FE200176F400D99303 /* CasinoViewController.swift */,
+				DCA8B5EB20012F6400D99303 /* ViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";

@@ -26,6 +26,7 @@ class CasinoCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        casinoImage.layer.cornerRadius = casinoImage.frame.height / 2
         casinoName.layer.cornerRadius = 15
         casinoName.layer.borderColor = UIColor.darkGray.cgColor
         casinoName.layer.borderWidth = 1

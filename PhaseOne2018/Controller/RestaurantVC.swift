@@ -63,16 +63,21 @@ class RestaurantVC: UIViewController, UICollectionViewDataSource, UICollectionVi
     }
     //To move to MenuVC
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let restaurant = restaurants[indexPath.row]
-        performSegue(withIdentifier: "MenuVC", sender: restaurant)
+//        let restaurant = restaurants[indexPath.row]
+//        performSegue(withIdentifier: "MenuVC", sender: restaurant)
         
     }
+    
+  }
+
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         //Don't forget to subtract your insects from the sides and top and bottom
         return CGSize(width: 100, height: 100)
     }
+    
+
     
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //        if let menuVC = segue.destination as? MenuVC {
@@ -83,5 +88,6 @@ class RestaurantVC: UIViewController, UICollectionViewDataSource, UICollectionVi
 //    }
     
     
-}
+
+
 

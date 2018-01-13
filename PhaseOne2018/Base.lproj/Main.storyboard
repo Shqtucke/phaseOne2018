@@ -170,10 +170,10 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YUa-FP-Krc">
-                                                    <rect key="frame" x="15" y="9" width="70" height="70"/>
+                                                    <rect key="frame" x="15" y="9" width="60" height="60"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="70" id="Cj7-kL-Ve5"/>
-                                                        <constraint firstAttribute="width" constant="70" id="YtN-he-ZOY"/>
+                                                        <constraint firstAttribute="height" constant="60" id="Cj7-kL-Ve5"/>
+                                                        <constraint firstAttribute="width" constant="60" id="YtN-he-ZOY"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ihv-Hi-FNv">
@@ -192,8 +192,8 @@
                                                 <constraint firstItem="MAQ-ol-Cro" firstAttribute="leading" secondItem="Ihv-Hi-FNv" secondAttribute="leading" id="OpR-18-pc4"/>
                                                 <constraint firstItem="Ihv-Hi-FNv" firstAttribute="top" secondItem="MAQ-ol-Cro" secondAttribute="bottom" constant="4" id="Sgv-iJ-gTs"/>
                                                 <constraint firstItem="YUa-FP-Krc" firstAttribute="leading" secondItem="K8D-t2-e0U" secondAttribute="leadingMargin" id="eNJ-x7-0Nd"/>
-                                                <constraint firstItem="MAQ-ol-Cro" firstAttribute="leading" secondItem="YUa-FP-Krc" secondAttribute="trailing" constant="8" symbolic="YES" id="gsC-kQ-bQL"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="YUa-FP-Krc" secondAttribute="bottom" constant="-2" id="guY-jU-rMd"/>
+                                                <constraint firstItem="MAQ-ol-Cro" firstAttribute="leading" secondItem="YUa-FP-Krc" secondAttribute="trailing" constant="18" id="gsC-kQ-bQL"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="YUa-FP-Krc" secondAttribute="bottom" constant="8" id="guY-jU-rMd"/>
                                                 <constraint firstItem="MAQ-ol-Cro" firstAttribute="top" secondItem="K8D-t2-e0U" secondAttribute="topMargin" id="qki-eK-Hfh"/>
                                                 <constraint firstItem="Ihv-Hi-FNv" firstAttribute="bottom" secondItem="K8D-t2-e0U" secondAttribute="bottomMargin" id="sOO-9o-JCW"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="MAQ-ol-Cro" secondAttribute="trailing" constant="-5" id="sVX-z6-8CC"/>
@@ -324,11 +324,53 @@
                     </view>
                     <connections>
                         <outlet property="restaurantCollection" destination="rKs-3G-H9J" id="D7v-OL-Jvv"/>
+                        <segue destination="Slg-Rb-Zde" kind="show" id="QIO-wL-n53"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MnK-Xc-2E0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1880.8" y="133.5832083958021"/>
+        </scene>
+        <!--Rest Main PageVC-->
+        <scene sceneID="w6D-H3-PLd">
+            <objects>
+                <viewController id="Slg-Rb-Zde" customClass="RestMainPageVC" customModule="PhaseOne2018" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OhO-pY-aEY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="T94-U1-5xr">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X83-Uf-vrO">
+                                <rect key="frame" x="313" y="81" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="19"/>
+                                <state key="normal" title="X">
+                                    <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="6xa-sw-1tm" kind="unwind" unwindAction="closWithSegue:" id="ZV8-3V-Ne3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="T94-U1-5xr" firstAttribute="leading" secondItem="XbZ-FG-Myf" secondAttribute="leading" id="166-7t-KSv"/>
+                            <constraint firstItem="T94-U1-5xr" firstAttribute="trailing" secondItem="XbZ-FG-Myf" secondAttribute="trailing" id="60O-7o-mKf"/>
+                            <constraint firstItem="T94-U1-5xr" firstAttribute="bottom" secondItem="XbZ-FG-Myf" secondAttribute="bottom" id="LLc-5a-oCH"/>
+                            <constraint firstItem="T94-U1-5xr" firstAttribute="top" secondItem="OhO-pY-aEY" secondAttribute="top" id="Xqf-sn-blJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="XbZ-FG-Myf"/>
+                    </view>
+                    <connections>
+                        <outlet property="fullImageView" destination="T94-U1-5xr" id="puE-1g-a6l"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MeG-Lu-wPs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="6xa-sw-1tm" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2617" y="134"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="96g-ax-bvs">
