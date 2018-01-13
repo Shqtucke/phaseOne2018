@@ -13,6 +13,7 @@ class CasinoViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     
     @IBOutlet var tableView: UITableView!
+    var urlArray = ["https://www.aria.com/en.html", "https://www.caesars.com/ballys-las-vegas", "https://www.bellagio.com/en.html", "https://www.caesars.com/cromwell", "http://www.casinoroyalehotel.com/", "https://www.circuscircus.com/en.html", "https://www.cosmopolitanlasvegas.com/"]
     
     
     override func viewDidLoad() {
@@ -86,19 +87,24 @@ class CasinoViewController: UIViewController, UITableViewDelegate, UITableViewDa
         }
     }
     
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let book = UITableViewRowAction(style: .normal, title: "website") { (action, index) in
+            let url = URL(string: self.urlArray[indexPath.row])
+            
+            if let url = url {
+                if UIApplication.shared.canOpenURL(url) {
+                    UIApplication.shared.open(url)
+                }
+            }
+            
+        }
+        book.backgroundColor = #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1)
+        
+        return [book]
 
     }
     
-    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-        let book = UITableViewRowAction(style: .normal, title: "website") { (action, index) in
-            
-
-            
-    }
-    book.backgroundColor = #colorLiteral(red: 0.1622568667, green: 0.5006636977, blue: 0.7243984938, alpha: 1)
-        
-        return [book]
-    }
+}
 
 
 

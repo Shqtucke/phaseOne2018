@@ -16,22 +16,14 @@ class DataService {
     private let casinos = [
     
         Casino(title: "Aria", description: "The Strip", imageButton: "Aria.jpeg", website: "https:www.aria.com"),
-        Casino(title: "Ballys", description: "The Strip", imageButton: "ballys1.jpg", website: "https://www.aria.com"),
-        Casino(title: "Bellagio", description: "The Strip", imageButton: "bellagio1.jpg", website: "https:www.aria.com"),
-        Casino(title: "Caesars", description: "The Strip", imageButton: "caesars.jpg", website: "https://www.aria.com"),
-        Casino(title: "Casino Royale", description: "The Strip", imageButton: "casinoR.jpg", website: "https://www.aria.com"),
-        Casino(title: "Circus Circus", description: "The Strip", imageButton: "circus.jpg", website: "https:www.aria.com"),
-        Casino(title: "Cosmopolitian", description: "The Strip", imageButton: "cosmo.jpg", website: "https://www.aria.com"),
+        Casino(title: "Ballys", description: "The Strip", imageButton: "ballys1.jpg", website: "https://www.caesars.com/ballys-las-vegas"),
+        Casino(title: "Bellagio", description: "The Strip", imageButton: "bellagio1.jpg", website: "https://www.bellagio.com/en.html"),
+        Casino(title: "Caesars", description: "The Strip", imageButton: "caesars.jpg", website: "https://www.caesars.com/cromwell"),
+        Casino(title: "Casino Royale", description: "The Strip", imageButton: "casinoR.jpg", website: "http://www.casinoroyalehotel.com/"),
+        Casino(title: "Circus Circus", description: "The Strip", imageButton: "circus.jpg", website: "https://www.circuscircus.com/en.html"),
+        Casino(title: "Cosmopolitian", description: "The Strip", imageButton: "cosmo.jpg", website: "https://www.cosmopolitanlasvegas.com/"),
         
-        Casino(title: "Aria", description: "The Strip", imageButton: "Aria.jpeg", website: "https:www.aria.com"),
-        Casino(title: "Ballys", description: "The Strip", imageButton: "ballys1.jpg", website: "https://www.aria.com"),
-        Casino(title: "Bellagio", description: "The Strip", imageButton: "bellagio1.jpg", website: "https:www.aria.com"),
-        Casino(title: "Caesars", description: "The Strip", imageButton: "caesars.jpg", website: "https://www.aria.com"),
-        Casino(title: "Casino Royale", description: "The Strip", imageButton: "casinoR.jpg", website: "https://www.aria.com"),
-        Casino(title: "Circus Circus", description: "The Strip", imageButton: "circus.jpg", website: "https:www.aria.com"),
-        Casino(title: "Cosmopolitian", description: "The Strip", imageButton: "cosmo.jpg", website: "https://www.aria.com"),
-        
-    ]
+     ]
     
     private let aria = [
         Restaurant(restaurant: "The Buffet", location: "Buffet", imageName: "TheBuffet.jpg"),

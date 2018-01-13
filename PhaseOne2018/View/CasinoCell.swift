@@ -27,13 +27,13 @@ class CasinoCell: UITableViewCell {
         super.awakeFromNib()
         
         casinoName.layer.cornerRadius = 15
-        casinoName.layer.borderColor = UIColor.white.cgColor
+        casinoName.layer.borderColor = UIColor.darkGray.cgColor
         casinoName.layer.borderWidth = 1
-        casinoName.layer.backgroundColor = UIColor.darkGray.cgColor
+        casinoName.layer.backgroundColor = UIColor.lightGray.cgColor
         casinoDescription.layer.cornerRadius = 15
-        casinoDescription.layer.borderColor = UIColor.white.cgColor
+        casinoDescription.layer.borderColor = UIColor.black.cgColor
         casinoDescription.layer.borderWidth = 1
-        casinoDescription.layer.backgroundColor = UIColor.darkGray.cgColor
+        casinoDescription.layer.backgroundColor = UIColor.lightGray.cgColor
         
     }
 
