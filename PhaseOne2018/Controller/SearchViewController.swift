@@ -39,15 +39,19 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
                 let firstPlacemark = placemarks[0]
                 
                 let annotation = MKPointAnnotation()
+                annotation.title = self.addressTextfield.text
+                
                 if let location = firstPlacemark.location {
                     
                     annotation.coordinate = location.coordinate
                     self.mapView.addAnnotation(annotation)
+                    
+                    self.mapView.showAnnotations([annotation], animated: true)
                 }
                 
-                let region = MKCoordinateRegionMakeWithDistance(annotation.coordinate, 250, 250)
-                self.mapView.setRegion(region, animated: true)
-                //self.mapView.setCamera(region, animated: true)
+//                let region = MKCoordinateRegionMakeWithDistance(annotation.coordinate, 250, 250)
+//                self.mapView.setRegion(region, animated: true)
+//                //self.mapView.setCamera(region, animated: true)
             }
         }
         

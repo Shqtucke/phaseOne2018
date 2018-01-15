@@ -23,7 +23,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         //Added an alert here just for fun
-        let alert = UIAlertController(title: "Welcome to Vegas", message: "Swipe Right to Begin!", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Welcome to Vegas", message: "Click Let's Go then Swipe Right to Begin!", preferredStyle: .alert)
         
         let action = UIAlertAction(title: "Let's Go!", style: .default, handler: nil)
         
