@@ -265,20 +265,47 @@
             </objects>
             <point key="canvasLocation" x="476" y="794.75262368815595"/>
         </scene>
-        <!--View Controller-->
+        <!--Search View Controller-->
         <scene sceneID="6Hh-r7-UW3">
             <objects>
-                <viewController id="L4g-qm-F67" sceneMemberID="viewController">
+                <viewController id="L4g-qm-F67" customClass="SearchViewController" customModule="PhaseOne2018" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Py5-NN-t8E">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="S0U-EQ-ic7">
+                                <rect key="frame" x="0.0" y="124" width="375" height="543"/>
+                            </mapView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1sU-j1-kf8">
+                                <rect key="frame" x="16" y="80" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="xmf-DB-MYc"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="search" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" red="0.3007236123" green="0.56984609369999994" blue="0.74288707970000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="S0U-EQ-ic7" firstAttribute="top" secondItem="1sU-j1-kf8" secondAttribute="bottom" constant="14" id="8ZK-rt-lM2"/>
+                            <constraint firstItem="S0U-EQ-ic7" firstAttribute="leading" secondItem="YDW-oM-Qcx" secondAttribute="leading" id="MIZ-9v-ndK"/>
+                            <constraint firstItem="YDW-oM-Qcx" firstAttribute="trailing" secondItem="1sU-j1-kf8" secondAttribute="trailing" constant="16" id="eMO-j0-4ha"/>
+                            <constraint firstItem="1sU-j1-kf8" firstAttribute="leading" secondItem="YDW-oM-Qcx" secondAttribute="leading" constant="16" id="k60-5o-X1Y"/>
+                            <constraint firstItem="S0U-EQ-ic7" firstAttribute="trailing" secondItem="YDW-oM-Qcx" secondAttribute="trailing" id="qAW-a6-YIT"/>
+                            <constraint firstItem="S0U-EQ-ic7" firstAttribute="bottom" secondItem="YDW-oM-Qcx" secondAttribute="bottom" id="qzL-v5-QU3"/>
+                            <constraint firstItem="1sU-j1-kf8" firstAttribute="top" secondItem="YDW-oM-Qcx" secondAttribute="top" constant="16" id="seA-I6-yDu"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="YDW-oM-Qcx"/>
                     </view>
+                    <connections>
+                        <outlet property="addressTextfield" destination="1sU-j1-kf8" id="Gea-dK-0bn"/>
+                        <outlet property="mapView" destination="S0U-EQ-ic7" id="jeH-0P-q4q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yxe-7X-tdH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1150" y="795"/>
+            <point key="canvasLocation" x="1149.5999999999999" y="794.75262368815595"/>
         </scene>
         <!--Places to Eat-->
         <scene sceneID="htL-GO-ktZ">
