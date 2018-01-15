@@ -11,7 +11,6 @@ import MapKit
 
 class SearchViewController: UIViewController, UITextFieldDelegate {
     
-    
     @IBOutlet var addressTextfield: UITextField!
     @IBOutlet var mapView: MKMapView!
     
@@ -48,17 +47,11 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
                     
                     self.mapView.showAnnotations([annotation], animated: true)
                 }
-                
-//                let region = MKCoordinateRegionMakeWithDistance(annotation.coordinate, 250, 250)
-//                self.mapView.setRegion(region, animated: true)
-//                //self.mapView.setCamera(region, animated: true)
-            }
+                }
         }
         
         return true 
     }
-
-
 }
 
 
