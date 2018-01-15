@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class ReverseGEOVC: UIViewController, CLLocationManagerDelegate {
+class ReverseGEOVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
     @IBOutlet var mapView: MKMapView!
     @IBOutlet var directionLabel: UILabel!
@@ -19,7 +19,7 @@ class ReverseGEOVC: UIViewController, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.title = "Show Address"
+        self.title = "Look for Addresses"
         
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.delegate = self
@@ -28,7 +28,7 @@ class ReverseGEOVC: UIViewController, CLLocationManagerDelegate {
         locationManager.distanceFilter = 20
         
         mapView.showsUserLocation = true
-        
+        mapView.delegate = self
     }
 
 
@@ -42,5 +42,47 @@ class ReverseGEOVC: UIViewController, CLLocationManagerDelegate {
         
         print(error)
     }
+    
+    //Everytime we move we get the center coordinate
+    func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
+        
+        print(mapView.centerCoordinate)
+        
+        let location = CLLocation(latitude: mapView.centerCoordinate.latitude, longitude: mapView.centerCoordinate.longitude)
+        
+        let geocoder = CLGeocoder()
+        geocoder.reverseGeocodeLocation(location) { (placemarks, error) in
+            
+            if error != nil {
+                
+                print(error)
+                
+                return
+            } else {
+                
+                if (placemarks?.count)! > 0 {
+                    
+                    let singlePlacemark = placemarks![0]
+                    let addressDict = singlePlacemark.addressDictionary
+                    
+                    print(addressDict)
+                    
+                    let street = addressDict!["Street"] ?? ""
+                    let address = addressDict!["Address"] ?? ""
+                    let state = addressDict!["Thoroughfare"] ?? ""
+                    let zip = addressDict!["Zip"] ?? ""
+                    
+                    self.directionLabel.text = "\(address) \(street) \(state) \(zip)"
+                }
+            }
+        }
+    }
 
 }
+
+
+
+
+
+
+
