@@ -25,13 +25,16 @@ class UserLocationVC: UIViewController, CLLocationManagerDelegate {
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
 
-        
+        mapView.showsUserLocation = true
+       
     }
 
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
-        let location = locations[0]
-        print(location)
+        let region = MKCoordinateRegionMakeWithDistance((locations.last?.coordinate)!, 1500, 1500)
+        
+        mapView.setRegion(region, animated: true)
+        
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
