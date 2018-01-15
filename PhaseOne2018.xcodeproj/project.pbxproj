@@ -21,6 +21,7 @@
 		DCA8B6062001833A00D99303 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA8B6052001833A00D99303 /* DataService.swift */; };
 		DCABC388200C179100B8B0F2 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCABC387200C179100B8B0F2 /* SearchViewController.swift */; };
 		DCABC38B200C190B00B8B0F2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCABC38A200C190B00B8B0F2 /* MapKit.framework */; };
+		DCABC38D200CE01C00B8B0F2 /* UserLocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCABC38C200CE01C00B8B0F2 /* UserLocationVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		DCA8B6052001833A00D99303 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		DCABC387200C179100B8B0F2 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		DCABC38A200C190B00B8B0F2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		DCABC38C200CE01C00B8B0F2 /* UserLocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocationVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,10 +92,11 @@
 		DCA8B5FB2001769600D99303 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				DCABC38C200CE01C00B8B0F2 /* UserLocationVC.swift */,
+				DCABC387200C179100B8B0F2 /* SearchViewController.swift */,
 				DC06B3E9200947BF00BFBFD6 /* RestaurantVC.swift */,
 				DCA8B5FE200176F400D99303 /* CasinoViewController.swift */,
 				DCA8B5EB20012F6400D99303 /* ViewController.swift */,
-				DCABC387200C179100B8B0F2 /* SearchViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 				DCA8B6062001833A00D99303 /* DataService.swift in Sources */,
 				DCA8B60320017F6A00D99303 /* Casino.swift in Sources */,
 				DCA8B5EA20012F6400D99303 /* AppDelegate.swift in Sources */,
+				DCABC38D200CE01C00B8B0F2 /* UserLocationVC.swift in Sources */,
 				DC06B3F020094EBE00BFBFD6 /* Restaurants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
