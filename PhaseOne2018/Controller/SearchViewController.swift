@@ -44,6 +44,10 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
                     annotation.coordinate = location.coordinate
                     self.mapView.addAnnotation(annotation)
                 }
+                
+                let region = MKCoordinateRegionMakeWithDistance(annotation.coordinate, 250, 250)
+                self.mapView.setRegion(region, animated: true)
+                //self.mapView.setCamera(region, animated: true)
             }
         }
         
@@ -52,3 +56,7 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
 
 
 }
+
+
+
+
