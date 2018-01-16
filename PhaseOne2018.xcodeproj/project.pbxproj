@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DC05D634200D5336006E3503 /* ReverseGEOVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC05D633200D5336006E3503 /* ReverseGEOVC.swift */; };
+		DC05D636200D7D1F006E3503 /* SearchForViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC05D635200D7D1F006E3503 /* SearchForViewController.swift */; };
 		DC06B3EA200947BF00BFBFD6 /* RestaurantVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC06B3E9200947BF00BFBFD6 /* RestaurantVC.swift */; };
 		DC06B3EE20094C7700BFBFD6 /* RestaurantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC06B3ED20094C7700BFBFD6 /* RestaurantCell.swift */; };
 		DC06B3F020094EBE00BFBFD6 /* Restaurants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC06B3EF20094EBE00BFBFD6 /* Restaurants.swift */; };
@@ -27,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		DC05D633200D5336006E3503 /* ReverseGEOVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseGEOVC.swift; sourceTree = "<group>"; };
+		DC05D635200D7D1F006E3503 /* SearchForViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchForViewController.swift; sourceTree = "<group>"; };
 		DC06B3E9200947BF00BFBFD6 /* RestaurantVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantVC.swift; sourceTree = "<group>"; };
 		DC06B3ED20094C7700BFBFD6 /* RestaurantCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCell.swift; sourceTree = "<group>"; };
 		DC06B3EF20094EBE00BFBFD6 /* Restaurants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurants.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 		DCA8B5FB2001769600D99303 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				DC05D635200D7D1F006E3503 /* SearchForViewController.swift */,
 				DC05D633200D5336006E3503 /* ReverseGEOVC.swift */,
 				DCABC38C200CE01C00B8B0F2 /* UserLocationVC.swift */,
 				DCABC387200C179100B8B0F2 /* SearchViewController.swift */,
@@ -225,6 +228,7 @@
 				DCA8B60320017F6A00D99303 /* Casino.swift in Sources */,
 				DCA8B5EA20012F6400D99303 /* AppDelegate.swift in Sources */,
 				DC05D634200D5336006E3503 /* ReverseGEOVC.swift in Sources */,
+				DC05D636200D7D1F006E3503 /* SearchForViewController.swift in Sources */,
 				DCABC38D200CE01C00B8B0F2 /* UserLocationVC.swift in Sources */,
 				DC06B3F020094EBE00BFBFD6 /* Restaurants.swift in Sources */,
 			);
