@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC0319DC200ECD4B00224BD9 /* Vegas.mov in Resources */ = {isa = PBXBuildFile; fileRef = DC0319DB200ECD4A00224BD9 /* Vegas.mov */; };
 		DC05D634200D5336006E3503 /* ReverseGEOVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC05D633200D5336006E3503 /* ReverseGEOVC.swift */; };
 		DC05D636200D7D1F006E3503 /* SearchForViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC05D635200D7D1F006E3503 /* SearchForViewController.swift */; };
 		DC06B3EA200947BF00BFBFD6 /* RestaurantVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC06B3E9200947BF00BFBFD6 /* RestaurantVC.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DC0319DB200ECD4A00224BD9 /* Vegas.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Vegas.mov; sourceTree = "<group>"; };
 		DC05D633200D5336006E3503 /* ReverseGEOVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseGEOVC.swift; sourceTree = "<group>"; };
 		DC05D635200D7D1F006E3503 /* SearchForViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchForViewController.swift; sourceTree = "<group>"; };
 		DC06B3E9200947BF00BFBFD6 /* RestaurantVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantVC.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 			children = (
 				DC06B3ED20094C7700BFBFD6 /* RestaurantCell.swift */,
 				DCA8B60020017D8400D99303 /* CasinoCell.swift */,
+				DC0319DB200ECD4A00224BD9 /* Vegas.mov */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCA8B5F420012F6400D99303 /* LaunchScreen.storyboard in Resources */,
+				DC0319DC200ECD4B00224BD9 /* Vegas.mov in Resources */,
 				DCA8B5F120012F6400D99303 /* Assets.xcassets in Resources */,
 				DCA8B5EF20012F6400D99303 /* Main.storyboard in Resources */,
 			);

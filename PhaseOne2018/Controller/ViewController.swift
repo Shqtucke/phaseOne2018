@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 class ViewController: UIViewController {
     
@@ -21,6 +22,8 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        richMedia()
         
         //Added an alert here just for fun
         let alert = UIAlertController(title: "Welcome to Vegas", message: "Click Let's Go then Swipe Right to Begin!", preferredStyle: .alert)
@@ -58,7 +61,32 @@ class ViewController: UIViewController {
         
         }
     
-
+    func richMedia() {
+        
+        let center = UNUserNotificationCenter.current()
+        
+        let content = UNMutableNotificationContent()
+        content.title = "Title"
+        content.subtitle = "Subtitle"
+        content.body = "This is the body of my notifications"
+        
+        let url = Bundle.main.url(forResource: "Vegas", withExtension: "mov")
+        
+        if let url = url {
+            let video = try? UNNotificationAttachment(identifier: "video", url: url, options: nil)
+            
+            if let video = video {
+                content.attachments = [video]
+            }
+        }
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 60, repeats: true)
+        
+        let request = UNNotificationRequest(identifier: "basic", content: content, trigger: trigger)
+        
+        center.add(request)
+    }
+    
     
     @IBAction func panPerformed(_ sender: UIPanGestureRecognizer) {
  
