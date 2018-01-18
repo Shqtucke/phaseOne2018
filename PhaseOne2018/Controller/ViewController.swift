@@ -15,11 +15,9 @@ class ViewController: UIViewController {
     @IBOutlet var blurView: UIVisualEffectView!
     @IBOutlet var sideView: UIView!
     
-    @IBOutlet var button1: UIButton!
-    @IBOutlet var button2: UIButton!
+   
+    @IBOutlet var menuButtons: [UIButton]!
     
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -49,13 +47,11 @@ class ViewController: UIViewController {
         sideView.layer.shadowOpacity = 0.8
         sideView.layer.shadowOffset = CGSize(width: 5, height: 0)
         
-        button1.layer.shadowColor = UIColor.black.cgColor
-        button1.layer.shadowOpacity = 0.3
-        button1.layer.shadowOffset = CGSize(width: 0.3 , height: 0)
-        
-        button2.layer.shadowColor = UIColor.black.cgColor
-        button2.layer.shadowOpacity = 0.3
-        button2.layer.shadowOffset = CGSize(width: 0.3 , height: 0)
+        for button in menuButtons {
+            button.layer.shadowColor = UIColor.black.cgColor
+            button.layer.shadowOpacity = 0.3
+            button.layer.shadowOffset = CGSize(width: 0.3 , height: 0)
+        }
         
         viewConstraint.constant = -123
         
@@ -66,9 +62,9 @@ class ViewController: UIViewController {
         let center = UNUserNotificationCenter.current()
         
         let content = UNMutableNotificationContent()
-        content.title = "Title"
-        content.subtitle = "Subtitle"
-        content.body = "This is the body of my notifications"
+        content.title = "Vegas"
+        content.subtitle = "Cromwell View"
+        content.body = "This is a view from Cromwell Casino Hotel"
         
         let url = Bundle.main.url(forResource: "Vegas", withExtension: "mov")
         
@@ -80,7 +76,7 @@ class ViewController: UIViewController {
             }
         }
         
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 60, repeats: true)
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
         
         let request = UNNotificationRequest(identifier: "basic", content: content, trigger: trigger)
         
